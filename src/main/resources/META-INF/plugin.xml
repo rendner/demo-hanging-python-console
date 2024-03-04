@@ -4,5 +4,32 @@
     <name>demo-hanging-python-console Template</name>
     <vendor>rendner</vendor>
 
-    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.python</depends>
+    <depends>com.intellij.modules.xdebugger</depends>
+
+    <actions>
+        <group id="debugActionGroup">
+            <action id="A"
+                    class="cms.rendner.demohangingpythonconsole.EvalActionA"
+                    text="EvalAction A">
+                <keyboard-shortcut keymap="$default" first-keystroke="alt A"/>
+            </action>
+            <action id="B"
+                    class="cms.rendner.demohangingpythonconsole.EvalActionB"
+                    text="EvalAction B">
+                <keyboard-shortcut keymap="$default" first-keystroke="alt B"/>
+            </action>
+            <action id="C"
+                    class="cms.rendner.demohangingpythonconsole.EvalActionC"
+                    text="EvalAction C">
+                <keyboard-shortcut keymap="$default" first-keystroke="alt C"/>
+            </action>
+            <action id="X"
+                    class="cms.rendner.demohangingpythonconsole.EvalActionX"
+                    text="EvalAction X">
+                <keyboard-shortcut keymap="$default" first-keystroke="alt X"/>
+            </action>
+            <add-to-group group-id="XDebugger.ValueGroup" anchor="first"/>
+        </group>
+    </actions>
 </idea-plugin>
